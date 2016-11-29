@@ -1,0 +1,23 @@
+{
+  "background": {
+      "persistent": false,
+      "scripts": ["script/background.js"]
+  },
+  "name": "Objective-C Apple Documentation",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Always open Apple Documentation with Objective-C",
+  "icons": {
+    "16": "objc.png",
+    "48": "objc.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "objc.png"
+    },
+    "default_title": "Toggle ObjC Documentation"
+  }
+}
