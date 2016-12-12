@@ -21,3 +21,5 @@ chrome.browserAction.onClicked.addListener(function() {
     }
 
 });
+
+//TODO: add back functionality
