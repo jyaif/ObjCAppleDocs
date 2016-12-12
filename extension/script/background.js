@@ -1,10 +1,20 @@
 var enabled = true;
+var backCalled = false;
+var objcURL;
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-        if (enabled && tab.url.indexOf("developer.apple.com/reference") != -1 && tab.url.indexOf("?language=objc") == -1) {
-            var objcURL = tab.url + "?language=objc";
-            chrome.tabs.executeScript(null,{"code": "window.history.back()"});
-            chrome.tabs.update(tab.id, {url: objcURL});
+        if( changeInfo.status == "complete")
+        {
+            if( backCalled )
+            {
+                chrome.tabs.update(tab.id, {url: objcURL});
+                backCalled = false;
+            }
+            if (enabled && tab.url.indexOf("developer.apple.com/reference") != -1 && tab.url.indexOf("?language=objc") == -1) {
+            	objcURL = tab.url + "?language=objc";
+            	chrome.tabs.executeScript(null,{"code": "window.history.back()"});
+                backCalled = true;
+            }
         }
 });
 
