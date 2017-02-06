@@ -1,24 +1,27 @@
 {
   "background": {
-      "persistent": false,
+      "persistent": true,
       "scripts": ["script/background.js"]
   },
   "name": "Objective-C Apple Documentation",
-  "version": "0.0.2",
+  "version": "1.0",
   "manifest_version": 2,
   "description": "Toggle Apple Documentation to default to Objective-C",
   "icons": {
-    "16": "objc.png",
-    "48": "objc.png"
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "96": "icon96.png",
+    "128": "icon128.png"
   },
   "permissions": [
-    "tabs", 
-    "http://*/*", 
-    "https://*/*"
+    "webRequest",
+    "webRequestBlocking",
+    "https://developer.apple.com/reference/*"
   ],
   "browser_action": {
     "default_icon": {
-      "19": "objc.png"
+      "48": "icon48.png",
+      "128": "icon128.png"
     },
     "default_title": "Toggle Obj-C Documentation"
   }
