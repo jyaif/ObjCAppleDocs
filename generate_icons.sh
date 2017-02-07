@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import os
 
+#requires the CLI tool Imagemagick
+
 def resizeImage(imageName, sizes):
   for size in sizes:
     s = str(size)
