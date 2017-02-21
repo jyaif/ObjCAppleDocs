@@ -4,7 +4,7 @@
       "scripts": ["script/background.js"]
   },
   "name": "Objective-C Apple Documentation",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 2,
   "description": "Toggle Apple Documentation to default to Objective-C",
   "icons": {

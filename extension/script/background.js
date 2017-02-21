@@ -12,7 +12,6 @@ chrome.browserAction.onClicked.addListener(function() {
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-        console.log(details)
         if (!enabled)
             return;
         var u = new URL(details.url);
