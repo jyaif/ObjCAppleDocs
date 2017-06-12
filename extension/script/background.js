@@ -21,5 +21,5 @@ chrome.webRequest.onBeforeRequest.addListener(
         searchParams.set("language", "objc");
         return {redirectUrl: u.toString()};
     },
-    {urls: ["https://developer.apple.com/reference/*"]},
+    {urls: ["https://developer.apple.com/documentation/*"]},
     ["blocking"]);
